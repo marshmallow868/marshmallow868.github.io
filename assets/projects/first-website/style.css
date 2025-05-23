@@ -1,0 +1,9 @@
+body{
+  background: url(images/background.jpg) no-repeat center;
+  text-align: center;
+}
+button{
+  background-color: white;
+  border-color: rgb(104, 104, 104);
+  color: rgb(104, 104, 104);
+}
