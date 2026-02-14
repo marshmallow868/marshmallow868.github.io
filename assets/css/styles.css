@@ -1,6 +1,11 @@
 @font-face {
-    font-family: 'Montserrat Semibold';
-    src: url(../fonts/Montserrat-SemiBold.ttf);
+    font-family: "Montserrat Semibold";
+    src: url(../fonts/Montserrat-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Montserrat Black Italic";
+    src: url(../fonts/Montserrat-Black-Italic.ttf) format('truetype');
 }
 
 :root {
@@ -10,7 +15,6 @@
     --accent-color: #fff;
     --border-color:#353535;
     --hover-color: #141414;
-    --font-family: "Montserrat Semibold", sans-serif;
 }
 
 * {
@@ -19,29 +23,17 @@
     padding: 0;
 
     &::selection {
-        background-color: var(--accent-color);
+        background-color: var(--text-color);
         color: var(--bg-color);
     }
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--border-color);
-    border-radius: 4px;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: var(--font-family);
+    font-family: "Montserrat Semibold", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     max-width: 550px;
     margin: 0 auto;
 }
@@ -99,6 +91,7 @@ header {
     padding: 25px 0 50px;
 
     h1 {
+        font-family: "Montserrat Black Italic", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         font-size: 25px;
         color: var(--accent-color);
     }
@@ -134,12 +127,13 @@ a {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 0 0 30px;
+    margin-bottom: 30px;
 
     img {
         width: 60px;
         height: 60px;
         border-radius: 50%;
+        object-fit: cover;
     }
 
     .greeting-text {
@@ -161,6 +155,11 @@ a {
             font-size: 16px;
             gap: 5px;
             fill: var(--text-color);
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 }
@@ -221,7 +220,7 @@ a {
 .work {
     display: grid;
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 
     h3 {
         font-size: 12px;
@@ -293,21 +292,48 @@ a {
                 padding: 10px;
                 margin-top: 5px;
                 text-align: center;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: var(--accent-color);
+                }
             }
         }
     }
 
-    a {
-        margin-top: 25px;
+    .external {
+        position: relative;
+        padding-right: 4px;
+        margin: 25px auto 0;
         font-size: 14px;
         text-align: center;
+        color: var(--accent-color);
+        transform: translateX(-3px);
+
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-top: solid 3px var(--accent-color);
+            border-right: solid 3px var(--accent-color);
+            border-radius: 3px;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%) rotate(45deg);
+            transition: transform 0.3s;
+        }
+
+        &:hover::before {
+            transform: translateX(4px) translateY(-50%) rotate(45deg);
+        }
     }
 }
 
 footer {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     font-size: 15px;
     color: var(--secondary-color);
 
@@ -342,21 +368,35 @@ footer {
 
 @media (max-width: 480px) {
     header {
-        padding: 20px 0 32px;
+        padding: 20px 0 30px;
     }
 
     .greeting {
         flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
     }
 
     .tech-stack {
-        gap: 8px;
+        gap: 10px;
+    }
+
+    .work {
+        margin-bottom: 25px;
+
+        .list {
+            gap: 10px;
+        }
+
+        a {
+            margin-top: 25px;
+        }
     }
 
     footer {
         flex-direction: column;
-        gap: 24px;
+        margin-bottom: 25px;
+        gap: 25px;
         align-items: center;
         text-align: center;
     }
