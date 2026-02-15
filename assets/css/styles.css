@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Montserrat Semibold";
-    src: url(../fonts/Montserrat-SemiBold.ttf) format('truetype');
+    src: url(/assets/fonts/Montserrat-SemiBold.ttf) format('truetype');
 }
 
 @font-face {
     font-family: "Montserrat Black Italic";
-    src: url(../fonts/Montserrat-Black-Italic.ttf) format('truetype');
+    src: url(/assets/fonts/Montserrat-Black-Italic.ttf) format('truetype');
 }
 
 :root {
