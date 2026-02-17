@@ -1,21 +1,29 @@
 # Mullet - Portfolio
 
-This is the source code for my personal website. I built it to be a fast, clean, and minimalist hub where I can showcase my projects and my focus on native macOS development and system-level programming.
+The source code for the personal portfolio website of **Mullet**. This project serves as a centralized documentation hub for showcasing specialized work in native macOS development and system-level programming.
 
-## The Approach
-I wanted a site that reflects my development philosophy: **performance and attention to detail**. Instead of heavy frameworks or bloated templates, I used a lean stack to keep the site lightning-fast and easy to maintain.
+## Table of Contents
+* [Development Philosophy](#development-philosophy)
+* [Project Highlights](#project-highlights)
+* [License](#license)
 
-- **Native Feel**: Dark-themed UI with smooth gradients, designed to align with a modern macOS aesthetic.
-- **Pure Tech**: Written in vanilla HTML, CSS, and JavaScript. No overhead, just the code I actually need.
-- **Project Focus**: Built specifically to highlight my work on tools like `hashcore` and `Hash Manager`.
+## Development Philosophy
 
-## Tech Stack
-- **HTML**: Structured for clarity and accessibility.
-- **CSS**: Custom layout and styling, featuring a modern aesthetic and responsive design for mobile.
+The architecture of this project is governed by principles of performance and minimalism. To align with a system-level development background, the implementation avoids high-level frameworks and heavy dependencies in favor of a lean, native-first approach.
 
-## Selected Work Featured
-- **hashcore**: A C-compatible shared library for xxHash64, optimized for macOS.
-- **Hash Manager**: A native macOS frontend built to interface with my Rust libraries.
+* **Performance-First**: Optimized for rapid load times and minimal browser overhead.
+* **Design Language**: A dark-themed interface utilizing modern macOS aesthetics, including high-fidelity gradients and responsive typography.
+* **Vanilla Implementation**: Built using standard web technologies to ensure long-term maintainability and compliance with web standards.
+
+## Project Highlights
+
+The portfolio is structured to provide technical visibility for the following specialized software:
+
+#### 1. hashcore
+Streaming xxHash64 library for macOS that processes large files without memory spikes or UI lag. It provides a C-compatible Rust core with real-time progress tracking and thread-safe cancellation for native app integration.
+
+#### 2. Hash Manager
+SwiftUI-based macOS frontend for hashcore that manages xxHash64 integrity verification across large batches. It provides a native interface for automated change detection and progress tracking without memory overhead.
 
 ## License
 
