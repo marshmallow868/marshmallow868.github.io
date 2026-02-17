@@ -1,11 +1,13 @@
 @font-face {
-    font-family: "Montserrat Semibold";
-    src: url(/assets/fonts/Montserrat-SemiBold.ttf) format('truetype');
+    font-family: "Montserrat SemiBold";
+    src: url('/assets/fonts/Montserrat-SemiBold.woff2') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Montserrat Black Italic";
-    src: url(/assets/fonts/Montserrat-Black-Italic.ttf) format('truetype');
+    src: url('/assets/fonts/Montserrat-Black-Italic.woff2') format('woff2');
+    font-display: swap;
 }
 
 :root {
@@ -31,11 +33,15 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: "Montserrat Semibold", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Montserrat SemiBold", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     max-width: 550px;
     margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
 }
 
 .gradient {
@@ -48,13 +54,13 @@ body {
 
     background: linear-gradient(
         45deg,
-        #8a2387,
-        #e94057,
-        #f27121,
-        #8a2387
+        #ff00ff,
+        #00a8c6,
+        #ff5f00,
+        #ff00ff
     );
     background-size: 400% 400%;
-    animation: flowGradient 15s ease infinite;
+    animation: flowGradient 20s ease infinite;
 
     opacity: 0.15;
     
@@ -109,17 +115,6 @@ header {
                 fill: var(--accent-color);
             }
         }
-    }
-}
-
-a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-
-    &:hover {
-        color: var(--accent-color);
     }
 }
 
@@ -183,7 +178,7 @@ a {
         border: 1px solid var(--border-color);
         border-radius: 15px;
         padding: 15px 10px;
-        transition: background-color 0.1s ease;
+        transition: all 0.1s ease;
 
         svg {
             width: 20px;
@@ -285,7 +280,20 @@ a {
                 color: var(--secondary-color);
             }
 
-            a {
+            .libraries {
+                display: flex;
+                gap: 5px;
+                
+                span {
+                    color: var(--accent-color);
+                    background-color: var(--border-color);
+                    padding: 5px 7px;
+                    border-radius: 5px;
+                    font-size: 10px;
+                }
+            }
+
+            .project-source {
                 background-color: var(--text-color);
                 color: var(--bg-color);
                 border-radius: 10px;
@@ -306,6 +314,7 @@ a {
         padding-right: 4px;
         margin: 25px auto 0;
         font-size: 14px;
+        font-weight: 600;
         text-align: center;
         color: var(--accent-color);
         transform: translateX(-3px);
@@ -316,7 +325,7 @@ a {
             height: 6px;
             border-top: solid 3px var(--accent-color);
             border-right: solid 3px var(--accent-color);
-            border-radius: 3px;
+            border-radius: 2.5px;
             position: absolute;
             top: 50%;
             left: 100%;

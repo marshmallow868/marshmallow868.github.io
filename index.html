@@ -20,12 +20,12 @@
     <meta property="og:title" content="Mullet - Portfolio">
     <meta property="og:description" content="Personal portfolio highlighting macOS internals and system-level libraries.">
     <meta property="og:url" content="https://marshmallow868.github.io/">
-    <meta property="og:image" content="https://marshmallow868.github.io/assets/images/og-image.png">
+    <meta property="og:image" content="https://marshmallow868.github.io/assets/images/og-image.webp">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mullet - Portfolio">
     <meta name="twitter:description" content="Personal portfolio highlighting macOS internals and system-level libraries.">
-    <meta name="twitter:image" content="https://marshmallow868.github.io/assets/images/og-image.png">
+    <meta name="twitter:image" content="https://marshmallow868.github.io/assets/images/og-image.webp">
 
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
@@ -47,7 +47,7 @@
     </header>
 
     <div class="greeting">
-        <img src="./assets/images/profile-picture.jpeg" alt="Profile Picture" />
+        <img src="./assets/images/profile-picture.webp" alt="Profile Picture" />
         <div class="greeting-text">
             <h2>Hey, I'm Mullet (Moo·lett) 👋</h2>
             <div class="location">
@@ -99,22 +99,32 @@
                     <span class="date">2026</span>
                     <span class="source">open source</span>
                 </div>
-                <img src="./assets/images/hashcore.png" alt="hashcore" />
+                <img src="./assets/images/hashcore.webp" alt="hashcore" />
                 <span class="title">hashcore</span>
+                <div class="libraries">
+                    <span>Rust</span>
+                    <span>xxHash-Rust</span>
+                    <span>C</span>
+                </div>
                 <p class="desc">
-                    A high-performance, C-compatible shared library for xxHash64 file hashing, optimized for macOS.
+                    Streaming xxHash64 library for macOS that processes large files without memory spikes or UI lag. It provides a C-compatible Rust core with real-time progress tracking and thread-safe cancellation for native app integration.
                 </p>
-                <a href="https://github.com/marshmallow868/hashcore" target="_blank">View on GitHub</a>
+                <a href="https://github.com/marshmallow868/hashcore" target="_blank" class="project-source">View on GitHub</a>
             </div>
             <div class="item">
                 <div class="head">
                     <span class="date">2025</span>
                     <span class="source closed">closed source</span>
                 </div>
-                <img src="./assets/images/hashmanager.png" alt="hashmanager" />
+                <img src="./assets/images/hashmanager.webp" alt="hashmanager" />
                 <span class="title">Hash Manager</span>
+                <div class="libraries">
+                    <span>Swift</span>
+                    <span>SwiftUI</span>
+                    <span>C</span>
+                </div>
                 <p class="desc">
-                    A high-performance macOS frontend for xxHash64 integrity verification, built to interface with the hashcore Rust library.
+                    SwiftUI-based macOS frontend for hashcore that manages xxHash64 integrity verification across large batches. It provides a native interface for automated change detection and progress tracking without memory overhead.
                 </p>
             </div>
         </div>
