@@ -265,7 +265,12 @@ header {
 
             img {
                 width: 100px;
+                height: 100px;
                 margin: 0 auto;
+
+                &.svg {
+                    width: 150px;
+                }
             }
 
             .title {
