@@ -19,11 +19,11 @@ The architecture of this project is governed by principles of performance and mi
 
 The portfolio is structured to provide technical visibility for the following specialized software:
 
-#### 1. hashcore
-Streaming xxHash64 library for macOS that processes large files without memory spikes or UI lag. It provides a C-compatible Rust core with real-time progress tracking and thread-safe cancellation for native app integration.
-
-#### 2. hvv-monitor-web
+#### 1. hvv-monitor-web
 Browser-based HVV departure board and route planner. It features real-time data, transit-specific color coding, and modes for interactive searching, fixed-position monitoring, and journey planning.
+
+#### 2. Hash Manager
+SwiftUI-based macOS frontend for the hashcore Rust library that manages xxHash64 integrity verification across large batches. It provides a native interface for automated change detection and progress tracking.
 
 ## License
 
