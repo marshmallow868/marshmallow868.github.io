@@ -12,3 +12,13 @@
 # VSCode / Cursor
 .vscode/
 .cursor/
+
+# Node
+node_modules/
+dist/
+build/
+.cache/
+npm-debug.log*
+.env
+.env.local
+.env.*.local

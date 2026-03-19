@@ -1,0 +1,21 @@
+{
+  "name": "mvllet.dev",
+  "version": "1.0.0",
+  "description": "Personal portfolio that showcases my skills and selected projects.",
+  "private": true,
+  "author": "Mullet",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^5.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
