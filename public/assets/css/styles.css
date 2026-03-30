@@ -217,7 +217,7 @@ header .socials svg:hover {
 }
 .tech-stack .item:hover svg#swift      { color: #f05138; }
 .tech-stack .item:hover svg#rust       { color: #da9873; }
-.tech-stack .item:hover svg#c          { color: #a9bacd; }
+.tech-stack .item:hover svg#svelte     { color: #ff3e00; }
 .tech-stack .item:hover svg#html       { color: #e44d26; }
 .tech-stack .item:hover svg#css        { color: #1572B6; }
 .tech-stack .item:hover svg#typescript { color: #007acc; }
@@ -407,10 +407,6 @@ footer .socials a:hover {
 
     .work .list {
         gap: 0.65rem;
-    }
-
-    .work a {
-        margin-top: 1.55rem;
     }
 
     footer {
