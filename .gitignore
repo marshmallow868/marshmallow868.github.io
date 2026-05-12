@@ -1,5 +1,7 @@
 # Project
-hashmanager/
+public/*
+!public/index.html
+!public/assets/
 
 # macOS
 .DS_Store
